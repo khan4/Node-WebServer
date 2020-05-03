@@ -4,7 +4,7 @@ const express = require('express')
 const forecastResult = require('./utils/forecast')
 const geoCoding = require('./utils/geocode')
 const app = express()
-
+const port = process.env.PORT || 3000
 
 // console.log(__dirname)
 // console.log(__filename)
@@ -140,6 +140,6 @@ app.get('*',(req,res)=>{
 
 })
 
-app.listen(3000, ()=>{
-    console.log('Server is up and running')
+app.listen(port, ()=>{
+    console.log('Server is up and running on port '+port)
 })

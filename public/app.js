@@ -10,10 +10,8 @@ weatherForm.addEventListener('submit',(e)=>{
 })
 
 function showLocation(loc){
-
     message1.textContent = "Loading..."
-
-    fetch('http://localhost:3000/weather?search='+loc).then((response)=>{
+    fetch('/weather?search='+loc).then((response)=>{
     response.json().then((data)=>{
     
     if(data.error){
